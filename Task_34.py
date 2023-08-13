@@ -16,3 +16,28 @@
 Вывод: Парам пам-пам  
 
 """
+
+def count_vowels(word):
+    vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
+    count = 0
+    for letter in word:
+        if letter in vowels:
+            count += 1
+    return count
+
+
+def сomparison(vowel_counts):
+    temp = vowel_counts[0]
+    for i in range(1, len(vowel_counts)):
+        if temp != vowel_counts[i]:
+            return "Пам парам"
+        temp = vowel_counts[i]
+    return "Парам пам-пам"
+
+
+# input_string = "пара-ра-рам рам-пам-папам па-ра-па-да"
+input_string = input("Вводи фразу: ")
+words = input_string.split()
+vowel_counts = list(map(count_vowels, words))
+
+print(сomparison(vowel_counts))
