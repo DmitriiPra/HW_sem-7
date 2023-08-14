@@ -15,7 +15,7 @@
 Ввод: пара-ра-рам рам-пам-папам па-ра-па-да    
 Вывод: Парам пам-пам  
 
-"""
+
 
 def count_vowels(word):
     vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ"
@@ -41,3 +41,10 @@ words = input_string.split()
 vowel_counts = list(map(count_vowels, words))
 
 print(сomparison(vowel_counts))
+
+add = lambda x: x ** x
+print(add(3))
+"""
+sp2 = [2, 0 ,4 -3, 9, -1, 8]
+
+print(list(map(lambda x: x + 2 if x > 0 else -1, sp2)))
